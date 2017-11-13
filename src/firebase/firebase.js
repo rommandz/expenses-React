@@ -1,5 +1,4 @@
 import * as firebase from 'firebase';
-import { log } from 'util';
 
 const config = {
   apiKey: 'AIzaSyCHVZUtpS35UTLqjnEAD1zMYF_CzXkxAK8',
@@ -13,8 +12,9 @@ const config = {
 firebase.initializeApp(config);
 
 const database = firebase.database();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export { firebase, database };
+export { firebase, database, googleAuthProvider };
 
 // const testData = [
 //   {
