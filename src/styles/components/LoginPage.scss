@@ -11,14 +11,13 @@
 .login__form {
   background-color: darken($color: white, $amount: 10%);
   color: #333;
-  padding: $xl-size $l-size;
+  padding: 48px 32px;
   text-align: center;
     h1 {
       margin: 0;
-      font-weight: 400;
     }
     p {
-      margin: $s-size 0;
+      margin: 12px 0;
     }
 }
 
@@ -27,7 +26,11 @@
   border: none;
   border-radius: 3px;
   color: white;
-  margin-top: $s-size;
-  padding: $s-size;
+  cursor: pointer;
+  margin-top: 12px;
+  padding: 12px;
+}
 
+.btn {
+  cursor: pointer;
 }

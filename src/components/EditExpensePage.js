@@ -24,12 +24,12 @@ class EditExpensePage extends React.Component {
   render () {
     console.log(this.props);
     return (
-      <div>
+      <div className='container'>
         <ExpenseForm
           expense={this.props.expense}
           onSubmit={this.onSubmit}
         />
-        <button onClick={this.onRemove}>Remove</button>
+        <button className='btn btn-secondary mt-1' onClick={this.onRemove}>Remove</button>
       </div>
     );
   }

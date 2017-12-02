@@ -95,34 +95,48 @@ export default class ExpenseForm extends React.Component {
       <div>
         { this.state.error && <p>{this.state.error}</p> }
         <form onSubmit={this.onSubmit}>
-          <input
-            type='text'
-            placeholder='Description'
-            autoFocus
-            value={this.state.description}
-            onChange={this.onDescriptionChange}
-          />
-          <input
-            type='text'
-            placeholder='Amount'
-            value={this.state.amount}
-            onChange={this.onAmountChange}
-          />
-          <SingleDatePicker
-            date={this.state.createdAt}
-            onDateChange={this.onDateChange}
-            focused={this.state.calendarFocused}
-            onFocusChange={this.onFocusChange}
-            numberOfMonths={1}
-            isOutsideRange={() => false}
-          />
-          <textarea
-            placeholder='Add a note for you expense (optional)'
-            value={this.state.note}
-            onChange={this.onNoteChange}
+          <div className="form-group">
+            <input
+              className='form-control'
+              type='text'
+              placeholder='Description'
+              autoFocus
+              value={this.state.description}
+              onChange={this.onDescriptionChange}
+            />
+          </div>
+          <div className="input-group mb-3">
+            <span className="input-group-addon">$</span>
+            <input
+              className='form-control'
+              type='text'
+              placeholder='Amount'
+              value={this.state.amount}
+              onChange={this.onAmountChange}
+            />
+          </div>
+          <div className="form-group">
+            <SingleDatePicker
+              date={this.state.createdAt}
+              onDateChange={this.onDateChange}
+              focused={this.state.calendarFocused}
+              onFocusChange={this.onFocusChange}
+              numberOfMonths={1}
+              isOutsideRange={() => false}
+            />
+          </div>
+          <div className="form-group">
+            <textarea
+              className='form-control'
+              placeholder='Add a note for you expense (optional)'
+              value={this.state.note}
+              onChange={this.onNoteChange}
+            >
+            </textarea>
+          </div>
+          <button
+            className='btn btn-success'
           >
-          </textarea>
-          <button>
             {this.props.expense ? 'Edit Expense' : 'Add Expense'}
           </button>
         </form>

@@ -10,9 +10,9 @@ const ExpensesSummary = (props) => {
 
   return (
     <div>
-      <h1>
+      <h3>
         Viewing {props.expensesCount} {expenseWord} totalling {formattedExpensesTotal}
-      </h1>       
+      </h3>       
     </div>
   );
 };
